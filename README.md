@@ -17,7 +17,6 @@ RUN git clone --single-branch --branch v1.23.7 https://github.com/OmniSharp/omni
 WORKDIR /app
 
 RUN npm i
-RUN npm_package_engines_vscode="^1.44.0" node ./node_modules/vscode/bin/install
 RUN npm run compile
 RUN npm run gulp vsix:offline:package
 
